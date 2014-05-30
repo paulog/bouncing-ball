@@ -1,3 +1,16 @@
 0 rem !to "build/bouncing-ball.prg"
 10 print "{clear}"
-
+100 rem initialize
+105 m=1024:rem screen origin
+110 mx=39:rem width (max x)
+110 my=24:rem height (max y)
+120 x=20:y=12:rem initial (x,y)
+130 dx=1:dy=1:rem deltas
+199 rem main loop
+200 poke m+40*y+x,81
+205 rem move dot
+210 x=x+dx
+220 if (x=0) or (x=mx) then dx=-dx
+230 y=y+dy
+240 if (y=0) or (y=my) then dy=-dy
+250 goto 200
