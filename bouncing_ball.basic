@@ -6,8 +6,11 @@
 110 my=24:rem height (max y)
 120 x=20:y=12:rem initial (x,y)
 130 dx=1:dy=1:rem deltas
+140 ox=x:oy=y:rem old x and old y
 199 rem main loop
-200 poke m+40*y+x,81
+200 poke m+40*oy+ox,32
+202 poke m+40*y+x,81
+203 ox=x:oy=y
 205 rem move dot
 210 x=x+dx
 220 if (x=0) or (x=mx) then dx=-dx
