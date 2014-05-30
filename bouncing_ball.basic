@@ -1,0 +1,3 @@
+0 rem !to "build/bouncing-ball.prg"
+10 print "{clear}"
+
